@@ -66,7 +66,7 @@ make
 
 
 
-This generates the executable named `mypreprocessor`.
+This generates the executable file named `mypreprocessor`.
 
 
 
