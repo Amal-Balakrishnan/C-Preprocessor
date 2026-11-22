@@ -1,0 +1,5 @@
+   mypreprocessor: main.c comment_removal.c file_inclusion.c macro_handler.c
+           cc main.c comment_removal.c file_inclusion.c macro_handler.c -o mypreprocessor
+  
+   clean:
+           rm -f mypreprocessor *.i temp1.txt temp2.txt
