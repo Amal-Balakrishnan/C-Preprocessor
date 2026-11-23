@@ -1,136 +1,124 @@
-**C Preprocessor**
+# C Preprocessor
 
+<p align="center">
+  A Simple C Preprocessor Implementation Using C
+</p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-C-blue.svg" />
+  <img src="https://img.shields.io/badge/Compiler-GCC-green.svg" />
+  <img src="https://img.shields.io/badge/Platform-Ubuntu-orange.svg" />
+</p>
 
-\## Project Overview
+---
 
+## 📌 Project Overview
 
+This project implements a basic **C Preprocessor** using the C programming language.
 
-This project implements a basic C Preprocessor using the C programming language.
+The program accepts a C source file as input, performs preprocessing operations, and generates an output file with the `.i` extension.
 
+The project demonstrates the basic working principles of preprocessing through a modular implementation.
 
+## ✨ Features
 
-The program accepts a C source file as input, performs basic preprocessing operations, and generates an output file with the `.i` extension.
+- **Comment Removal:** Removes single-line (`//`) and multi-line (`/* ... */`) comments.
+- **File Inclusion:** Supports basic local header file inclusion.
+- **Object-like Macros:** Supports macros such as `#define PI 3.14`.
+- **Function-like Macros:** Supports macros such as `#define SQUARE(x) ((x) * (x))`.
+- **Output Generation:** Generates a preprocessed `.i` file.
 
+## 📂 Project Structure
 
+```text
+C-Preprocessor/
+│
+├── main.c
+├── comment_removal.c
+├── comment_removal.h
+├── file_inclusion.c
+├── file_inclusion.h
+├── macro_handler.c
+├── macro_handler.h
+├── myheader.h
+├── inputfile.c
+├── Makefile
+└── README.md
+```
 
-\## Features
+## ⚙️ Requirements
 
+- Ubuntu Linux
+- GCC Compiler
+- Basic knowledge of C programming
 
+## 🚀 Compilation
 
-\- Removal of single-line comments (`//`).
+Clone the repository:
 
-\- Removal of multi-line comments (`/\* ... \*/`).
+```bash
+git clone https://github.com/amalpv798-ai/C-Preprocessor.git
+```
 
-\- Basic local header file inclusion.
+Navigate to the project directory:
 
-\- Object-like macro substitution.
+```bash
+cd C-Preprocessor
+```
 
-\- Function-like macro substitution with one parameter.
+Compile the project:
 
-\- Generation of a preprocessed output file.
-
-
-
-\## Project Structure
-
-
-
-\- `main.c` – Main program and processing sequence.
-
-\- `comment\_removal.c` – Removes comments.
-
-\- `comment\_removal.h` – Comment removal function declaration.
-
-\- `file\_inclusion.c` – Handles header file inclusion.
-
-\- `file\_inclusion.h` – File inclusion function declarations.
-
-\- `macro\_handler.c` – Handles macro definitions and substitutions.
-
-\- `macro\_handler.h` – Macro handler function declaration.
-
-\- `Makefile` – Compiles the project.
-
-
-
-\## Compilation
-
-
-
-Open the terminal in the project directory and run:
-
-
-
+```bash
 make
+```
 
+This generates the executable:
 
+```text
+mypreprocessor
+```
 
-This generates the executable file named `mypreprocessor`.
+## ▶️ Execution
 
+Run the program by providing a C source file as a command-line argument:
 
-
-\## Execution
-
-
-
-Run the program by providing a C source filename:
-
-
-
+```bash
 ./mypreprocessor inputfile.c
+```
 
+The program generates the preprocessed output:
 
-
-The program generates:
-
-
-
+```text
 inputfile.i
+```
 
+## 📄 Viewing the Output
 
+To view the generated file:
 
-\## Viewing the Output
-
-
-
+```bash
 cat inputfile.i
+```
 
+## 🧹 Cleaning Generated Files
 
+To remove the executable, generated `.i` files, and temporary files:
 
-\## Cleaning Generated Files
-
-
-
+```bash
 make clean
+```
 
+## ⚠️ Limitations
 
+- Conditional compilation is not implemented.
+- Function-like macros support one parameter.
+- Nested header file processing is not fully supported.
+- System headers may remain as include directives for GCC to process.
+- This is a basic educational implementation, not a complete replacement for the GCC preprocessor.
 
-\## Limitations
+## 🛠️ Technologies Used
 
-
-
-\- This is a basic implementation of a C preprocessor.
-
-\- Function-like macros support one parameter.
-
-\- Conditional compilation is not implemented.
-
-\- Header inclusion is limited; nested header processing is not fully supported.
-
-\- System headers may be left for GCC to process.
-
-
-
-\## Technologies Used
-
-
-
-\- C Programming Language
-
-\- GCC Compiler
-
-\- Ubuntu Linux
-
-\- Makefile
-
+- C Programming Language
+- GCC Compiler
+- Ubuntu Linux
+- Makefile
